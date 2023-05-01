@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Library.Core.Models
 {
-    public class ReturnedRecord
+    public class ReturnedRecord: BaseEntity
     {
-        public int Id { get; set; }
         public int UserId { get; set; }
         public int BookId { get; set; }
         public DateTime ReturnDate { get; set; }

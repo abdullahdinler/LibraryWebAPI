@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.Core.Models
+namespace Library.Core.DTOs.AddressDTOs
 {
-    public class Address : BaseEntity
+    public class AddressDto : BaseDto
     {
         public string Addres { get; set; }
-
-        public ICollection<User> Users { get; set; }
     }
 }

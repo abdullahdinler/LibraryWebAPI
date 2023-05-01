@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.Core.Models
+namespace Library.Core.DTOs.GenreDTOs
 {
-    public class Genre : BaseEntity
+    public class GenreUpdateDto
     {
+        public int Id { get; set; }
         public string Name { get; set; }
-
-        public ICollection<Book> Books { get; set; }
     }
 }

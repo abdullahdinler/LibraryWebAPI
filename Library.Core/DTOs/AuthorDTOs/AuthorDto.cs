@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.Core.Models
+namespace Library.Core.DTOs.AuthorDTOs
 {
-    public class Author : BaseEntity
+    public class AuthorDto : BaseDto
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        public ICollection<Book> Books { get; set; }
     }
 }

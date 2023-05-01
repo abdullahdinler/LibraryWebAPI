@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Library.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.Core.Models
+namespace Library.Core.DTOs.UserDTOs
 {
-    public class User : BaseEntity
+    public class UserDto : BaseDto
     {
         public int AddressId { get; set; }
         public string FirstName { get; set; }
@@ -16,8 +17,5 @@ namespace Library.Core.Models
         public string Status { get; set; }
 
         public Address Address { get; set; }
-        public ICollection<BorrowedRecord> BorrowedRecords { get; set; }
-        public ICollection<ReturnedRecord> ReturnedRecords { get; set; }
-
     }
 }

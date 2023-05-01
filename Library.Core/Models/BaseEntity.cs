@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Library.Core.Models
 {
-    public class Genre : BaseEntity
+    public abstract class BaseEntity
     {
-        public string Name { get; set; }
-
-        public ICollection<Book> Books { get; set; }
+        public int Id { get; set; }
     }
 }
