@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace Library.API.Migrations
+namespace Library.Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -215,16 +215,16 @@ namespace Library.API.Migrations
                 columns: new[] { "Id", "AuthorId", "Cover", "DateAdded", "GenreId", "Status", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, "Cover 1", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1760), 1, "Status 1", "Book 1" },
-                    { 2, 2, "Cover 2", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1776), 2, "Status 2", "Book 2" },
-                    { 3, 3, "Cover 3", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1778), 3, "Status 3", "Book 3" },
-                    { 4, 4, "Cover 4", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1780), 4, "Status 4", "Book 4" },
-                    { 5, 5, "Cover 5", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1782), 5, "Status 5", "Book 5" },
-                    { 6, 1, "Cover 6", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1783), 1, "Status 6", "Book 6" },
-                    { 7, 2, "Cover 7", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1785), 2, "Status 7", "Book 7" },
-                    { 8, 3, "Cover 8", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1787), 3, "Status 8", "Book 8" },
-                    { 9, 4, "Cover 9", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1789), 4, "Status 9", "Book 9" },
-                    { 10, 5, "Cover 10", new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1790), 5, "Status 10", "Book 10" }
+                    { 1, 1, "Cover 1", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2624), 1, "Status 1", "Book 1" },
+                    { 2, 2, "Cover 2", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2639), 2, "Status 2", "Book 2" },
+                    { 3, 3, "Cover 3", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2641), 3, "Status 3", "Book 3" },
+                    { 4, 4, "Cover 4", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2643), 4, "Status 4", "Book 4" },
+                    { 5, 5, "Cover 5", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2645), 5, "Status 5", "Book 5" },
+                    { 6, 1, "Cover 6", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2647), 1, "Status 6", "Book 6" },
+                    { 7, 2, "Cover 7", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2648), 2, "Status 7", "Book 7" },
+                    { 8, 3, "Cover 8", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2652), 3, "Status 8", "Book 8" },
+                    { 9, 4, "Cover 9", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2653), 4, "Status 9", "Book 9" },
+                    { 10, 5, "Cover 10", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2655), 5, "Status 10", "Book 10" }
                 });
 
             migrationBuilder.InsertData(
@@ -244,11 +244,11 @@ namespace Library.API.Migrations
                 columns: new[] { "Id", "BookId", "BorrowDate", "ReturnDate", "Status", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2070), new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2074), "Status 1", 1 },
-                    { 2, 2, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2081), new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2082), "Status 2", 2 },
-                    { 3, 3, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2084), new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2084), "Status 3", 3 },
-                    { 4, 4, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2086), new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2087), "Status 4", 4 },
-                    { 5, 5, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2088), new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2089), "Status 5", 5 }
+                    { 1, 1, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2900), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2903), "Status 1", 1 },
+                    { 2, 2, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2909), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2910), "Status 2", 2 },
+                    { 3, 3, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2912), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2912), "Status 3", 3 },
+                    { 4, 4, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2914), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2914), "Status 4", 4 },
+                    { 5, 5, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2916), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2916), "Status 5", 5 }
                 });
 
             migrationBuilder.InsertData(
@@ -256,11 +256,11 @@ namespace Library.API.Migrations
                 columns: new[] { "Id", "BookId", "ReturnDate", "Status", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2609), "Status 1", 1 },
-                    { 2, 2, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2615), "Status 2", 2 },
-                    { 3, 3, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2617), "Status 3", 3 },
-                    { 4, 4, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2618), "Status 4", 4 },
-                    { 5, 5, new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2620), "Status 5", 5 }
+                    { 1, 1, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3518), "Status 1", 1 },
+                    { 2, 2, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3523), "Status 2", 2 },
+                    { 3, 3, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3525), "Status 3", 3 },
+                    { 4, 4, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3527), "Status 4", 4 },
+                    { 5, 5, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3528), "Status 5", 5 }
                 });
 
             migrationBuilder.CreateIndex(

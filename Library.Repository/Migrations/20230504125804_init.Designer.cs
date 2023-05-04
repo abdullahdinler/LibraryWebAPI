@@ -4,16 +4,19 @@ using Library.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Library.API.Migrations
+namespace Library.Repository.Migrations
 {
     [DbContext(typeof(LibraryDbContext))]
-    partial class LibraryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230504125804_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -217,7 +220,7 @@ namespace Library.API.Migrations
                             Id = 1,
                             AuthorId = 1,
                             Cover = "Cover 1",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1760),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2624),
                             GenreId = 1,
                             Status = "Status 1",
                             Title = "Book 1"
@@ -227,7 +230,7 @@ namespace Library.API.Migrations
                             Id = 2,
                             AuthorId = 2,
                             Cover = "Cover 2",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1776),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2639),
                             GenreId = 2,
                             Status = "Status 2",
                             Title = "Book 2"
@@ -237,7 +240,7 @@ namespace Library.API.Migrations
                             Id = 3,
                             AuthorId = 3,
                             Cover = "Cover 3",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1778),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2641),
                             GenreId = 3,
                             Status = "Status 3",
                             Title = "Book 3"
@@ -247,7 +250,7 @@ namespace Library.API.Migrations
                             Id = 4,
                             AuthorId = 4,
                             Cover = "Cover 4",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1780),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2643),
                             GenreId = 4,
                             Status = "Status 4",
                             Title = "Book 4"
@@ -257,7 +260,7 @@ namespace Library.API.Migrations
                             Id = 5,
                             AuthorId = 5,
                             Cover = "Cover 5",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1782),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2645),
                             GenreId = 5,
                             Status = "Status 5",
                             Title = "Book 5"
@@ -267,7 +270,7 @@ namespace Library.API.Migrations
                             Id = 6,
                             AuthorId = 1,
                             Cover = "Cover 6",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1783),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2647),
                             GenreId = 1,
                             Status = "Status 6",
                             Title = "Book 6"
@@ -277,7 +280,7 @@ namespace Library.API.Migrations
                             Id = 7,
                             AuthorId = 2,
                             Cover = "Cover 7",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1785),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2648),
                             GenreId = 2,
                             Status = "Status 7",
                             Title = "Book 7"
@@ -287,7 +290,7 @@ namespace Library.API.Migrations
                             Id = 8,
                             AuthorId = 3,
                             Cover = "Cover 8",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1787),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2652),
                             GenreId = 3,
                             Status = "Status 8",
                             Title = "Book 8"
@@ -297,7 +300,7 @@ namespace Library.API.Migrations
                             Id = 9,
                             AuthorId = 4,
                             Cover = "Cover 9",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1789),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2653),
                             GenreId = 4,
                             Status = "Status 9",
                             Title = "Book 9"
@@ -307,7 +310,7 @@ namespace Library.API.Migrations
                             Id = 10,
                             AuthorId = 5,
                             Cover = "Cover 10",
-                            DateAdded = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(1790),
+                            DateAdded = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2655),
                             GenreId = 5,
                             Status = "Status 10",
                             Title = "Book 10"
@@ -352,8 +355,8 @@ namespace Library.API.Migrations
                         {
                             Id = 1,
                             BookId = 1,
-                            BorrowDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2070),
-                            ReturnDate = new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2074),
+                            BorrowDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2900),
+                            ReturnDate = new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2903),
                             Status = "Status 1",
                             UserId = 1
                         },
@@ -361,8 +364,8 @@ namespace Library.API.Migrations
                         {
                             Id = 2,
                             BookId = 2,
-                            BorrowDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2081),
-                            ReturnDate = new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2082),
+                            BorrowDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2909),
+                            ReturnDate = new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2910),
                             Status = "Status 2",
                             UserId = 2
                         },
@@ -370,8 +373,8 @@ namespace Library.API.Migrations
                         {
                             Id = 3,
                             BookId = 3,
-                            BorrowDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2084),
-                            ReturnDate = new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2084),
+                            BorrowDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2912),
+                            ReturnDate = new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2912),
                             Status = "Status 3",
                             UserId = 3
                         },
@@ -379,8 +382,8 @@ namespace Library.API.Migrations
                         {
                             Id = 4,
                             BookId = 4,
-                            BorrowDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2086),
-                            ReturnDate = new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2087),
+                            BorrowDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2914),
+                            ReturnDate = new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2914),
                             Status = "Status 4",
                             UserId = 4
                         },
@@ -388,8 +391,8 @@ namespace Library.API.Migrations
                         {
                             Id = 5,
                             BookId = 5,
-                            BorrowDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2088),
-                            ReturnDate = new DateTime(2023, 5, 19, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2089),
+                            BorrowDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2916),
+                            ReturnDate = new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2916),
                             Status = "Status 5",
                             UserId = 5
                         });
@@ -475,7 +478,7 @@ namespace Library.API.Migrations
                         {
                             Id = 1,
                             BookId = 1,
-                            ReturnDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2609),
+                            ReturnDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3518),
                             Status = "Status 1",
                             UserId = 1
                         },
@@ -483,7 +486,7 @@ namespace Library.API.Migrations
                         {
                             Id = 2,
                             BookId = 2,
-                            ReturnDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2615),
+                            ReturnDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3523),
                             Status = "Status 2",
                             UserId = 2
                         },
@@ -491,7 +494,7 @@ namespace Library.API.Migrations
                         {
                             Id = 3,
                             BookId = 3,
-                            ReturnDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2617),
+                            ReturnDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3525),
                             Status = "Status 3",
                             UserId = 3
                         },
@@ -499,7 +502,7 @@ namespace Library.API.Migrations
                         {
                             Id = 4,
                             BookId = 4,
-                            ReturnDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2618),
+                            ReturnDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3527),
                             Status = "Status 4",
                             UserId = 4
                         },
@@ -507,7 +510,7 @@ namespace Library.API.Migrations
                         {
                             Id = 5,
                             BookId = 5,
-                            ReturnDate = new DateTime(2023, 5, 4, 1, 0, 38, 653, DateTimeKind.Local).AddTicks(2620),
+                            ReturnDate = new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3528),
                             Status = "Status 5",
                             UserId = 5
                         });

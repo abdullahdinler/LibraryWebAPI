@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace Library.Core.Repositories
 {
@@ -11,6 +6,7 @@ namespace Library.Core.Repositories
     {
         Task<T> GetByIdAsync(int id);
         IQueryable<T> GetAll();
+        IQueryable<T> Where(Expression<Func<T, bool>> predicate);
         Task<bool> AnyAsync(Expression<Func<T, bool>> predicate);
         Task AddAsync(T entity);
         Task AddRangeAsync(IEnumerable<T> entities);

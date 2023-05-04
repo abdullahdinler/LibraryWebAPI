@@ -1,5 +1,7 @@
+using System;
 using System.Reflection;
 using Library.Repository.Context;
+using Library.Service.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,12 +13,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(typeof(MapProfile));
+
+
 
 builder.Services.AddDbContext<LibraryDbContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("Sql"), x =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Sql"), option =>
     {
-        x.MigrationsAssembly("Library.API");
+        option.MigrationsAssembly(Assembly.GetAssembly(typeof(LibraryDbContext)).GetName().Name);
     });
 });
 
