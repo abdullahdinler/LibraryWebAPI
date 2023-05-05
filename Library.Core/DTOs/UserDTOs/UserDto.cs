@@ -16,6 +16,5 @@ namespace Library.Core.DTOs.UserDTOs
         public string Email { get; set; }
         public string Status { get; set; }
 
-        public Address Address { get; set; }
     }
 }

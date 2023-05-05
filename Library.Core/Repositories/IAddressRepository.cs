@@ -9,5 +9,6 @@ namespace Library.Core.Repositories
 {
     public interface IAddressRepository : IGenericRepository<Address>
     {
+        Task<List<Address>> GetAddressWithUserAsync();
     }
 }

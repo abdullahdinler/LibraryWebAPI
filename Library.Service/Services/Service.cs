@@ -12,8 +12,8 @@ namespace Library.Service.Services
     public class Service<TEntity, TDto> : IService<TEntity, TDto> where TEntity : BaseEntity where TDto : class
     {
         private readonly IGenericRepository<TEntity> _repository;
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
+        protected readonly IUnitOfWork _unitOfWork;
+        protected readonly IMapper _mapper;
 
 
         public Service(IGenericRepository<TEntity> repository, IUnitOfWork unitOfWork, IMapper mapper)

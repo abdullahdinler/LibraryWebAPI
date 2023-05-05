@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Library.Core.Models;
 
-namespace Library.Core.Repositories
+namespace Library.Core.DTOs.AddressDTOs
 {
-    public interface IUserRepository : IGenericRepository<User>
+    public class AddressWithUserDto : AddressDto
     {
-        Task<List<User>> GetUserWithAddress();
+        public List<User> Users { get; set; }
     }
 }

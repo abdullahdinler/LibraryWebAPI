@@ -9,5 +9,6 @@ namespace Library.Core.Repositories
 {
     public interface IBookRepository : IGenericRepository<Book>
     {
+        Task<List<Book>> GetBookWithAuthor();
     }
 }

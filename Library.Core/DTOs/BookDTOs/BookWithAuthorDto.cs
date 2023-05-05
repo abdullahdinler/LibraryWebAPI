@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Library.Core.Models;
 
-namespace Library.Core.Repositories
+namespace Library.Core.DTOs.BookDTOs
 {
-    public interface IUserRepository : IGenericRepository<User>
+    public class BookWithAuthorDto : BookDto
     {
-        Task<List<User>> GetUserWithAddress();
+        public Author Author { get; set; }
     }
 }

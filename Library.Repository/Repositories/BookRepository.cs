@@ -1,6 +1,7 @@
 ﻿using Library.Core.Models;
 using Library.Core.Repositories;
 using Library.Repository.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Library.Repository.Repositories
 {
@@ -8,6 +9,11 @@ namespace Library.Repository.Repositories
     {
         public BookRepository(LibraryDbContext context) : base(context)
         {
+        }
+
+        public async Task<List<Book>> GetBookWithAuthor()
+        {
+            return await _context.Books.Include(x => x.Author).ToListAsync();
         }
     }
 }
