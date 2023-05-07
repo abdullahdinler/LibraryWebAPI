@@ -29,7 +29,7 @@ namespace Library.Repository.Context
         public DbSet<Book> Books { get; set; }
         public DbSet<BorrowedRecord> BorrowedRecords { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public ReturnedRecord ReturnedRecord { get; set; }
+        public DbSet<ReturnedRecord> ReturnedRecords { get; set; }
         public DbSet<User> Users { get; set; }
     }
 }

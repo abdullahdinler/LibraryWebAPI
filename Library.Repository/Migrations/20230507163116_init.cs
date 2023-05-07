@@ -137,7 +137,7 @@ namespace Library.Repository.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ReturnedRecord",
+                name: "ReturnedRecords",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -149,15 +149,15 @@ namespace Library.Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ReturnedRecord", x => x.Id);
+                    table.PrimaryKey("PK_ReturnedRecords", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ReturnedRecord_Books_BookId",
+                        name: "FK_ReturnedRecords_Books_BookId",
                         column: x => x.BookId,
                         principalTable: "Books",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ReturnedRecord_Users_UserId",
+                        name: "FK_ReturnedRecords_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -215,16 +215,16 @@ namespace Library.Repository.Migrations
                 columns: new[] { "Id", "AuthorId", "Cover", "DateAdded", "GenreId", "Status", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, "Cover 1", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2624), 1, "Status 1", "Book 1" },
-                    { 2, 2, "Cover 2", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2639), 2, "Status 2", "Book 2" },
-                    { 3, 3, "Cover 3", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2641), 3, "Status 3", "Book 3" },
-                    { 4, 4, "Cover 4", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2643), 4, "Status 4", "Book 4" },
-                    { 5, 5, "Cover 5", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2645), 5, "Status 5", "Book 5" },
-                    { 6, 1, "Cover 6", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2647), 1, "Status 6", "Book 6" },
-                    { 7, 2, "Cover 7", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2648), 2, "Status 7", "Book 7" },
-                    { 8, 3, "Cover 8", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2652), 3, "Status 8", "Book 8" },
-                    { 9, 4, "Cover 9", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2653), 4, "Status 9", "Book 9" },
-                    { 10, 5, "Cover 10", new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2655), 5, "Status 10", "Book 10" }
+                    { 1, 1, "Cover 1", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8726), 1, "Status 1", "Book 1" },
+                    { 2, 2, "Cover 2", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8740), 2, "Status 2", "Book 2" },
+                    { 3, 3, "Cover 3", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8743), 3, "Status 3", "Book 3" },
+                    { 4, 4, "Cover 4", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8744), 4, "Status 4", "Book 4" },
+                    { 5, 5, "Cover 5", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8746), 5, "Status 5", "Book 5" },
+                    { 6, 1, "Cover 6", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8748), 1, "Status 6", "Book 6" },
+                    { 7, 2, "Cover 7", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8749), 2, "Status 7", "Book 7" },
+                    { 8, 3, "Cover 8", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8751), 3, "Status 8", "Book 8" },
+                    { 9, 4, "Cover 9", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8753), 4, "Status 9", "Book 9" },
+                    { 10, 5, "Cover 10", new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(8755), 5, "Status 10", "Book 10" }
                 });
 
             migrationBuilder.InsertData(
@@ -244,23 +244,23 @@ namespace Library.Repository.Migrations
                 columns: new[] { "Id", "BookId", "BorrowDate", "ReturnDate", "Status", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2900), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2903), "Status 1", 1 },
-                    { 2, 2, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2909), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2910), "Status 2", 2 },
-                    { 3, 3, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2912), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2912), "Status 3", 3 },
-                    { 4, 4, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2914), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2914), "Status 4", 4 },
-                    { 5, 5, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2916), new DateTime(2023, 5, 19, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(2916), "Status 5", 5 }
+                    { 1, 1, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9026), new DateTime(2023, 5, 22, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9029), "Status 1", 1 },
+                    { 2, 2, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9035), new DateTime(2023, 5, 22, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9036), "Status 2", 2 },
+                    { 3, 3, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9038), new DateTime(2023, 5, 22, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9038), "Status 3", 3 },
+                    { 4, 4, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9042), new DateTime(2023, 5, 22, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9043), "Status 4", 4 },
+                    { 5, 5, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9044), new DateTime(2023, 5, 22, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9045), "Status 5", 5 }
                 });
 
             migrationBuilder.InsertData(
-                table: "ReturnedRecord",
+                table: "ReturnedRecords",
                 columns: new[] { "Id", "BookId", "ReturnDate", "Status", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3518), "Status 1", 1 },
-                    { 2, 2, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3523), "Status 2", 2 },
-                    { 3, 3, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3525), "Status 3", 3 },
-                    { 4, 4, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3527), "Status 4", 4 },
-                    { 5, 5, new DateTime(2023, 5, 4, 15, 58, 4, 334, DateTimeKind.Local).AddTicks(3528), "Status 5", 5 }
+                    { 1, 1, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9592), "Status 1", 1 },
+                    { 2, 2, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9596), "Status 2", 2 },
+                    { 3, 3, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9598), "Status 3", 3 },
+                    { 4, 4, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9599), "Status 4", 4 },
+                    { 5, 5, new DateTime(2023, 5, 7, 19, 31, 16, 478, DateTimeKind.Local).AddTicks(9600), "Status 5", 5 }
                 });
 
             migrationBuilder.CreateIndex(
@@ -284,13 +284,13 @@ namespace Library.Repository.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ReturnedRecord_BookId",
-                table: "ReturnedRecord",
+                name: "IX_ReturnedRecords_BookId",
+                table: "ReturnedRecords",
                 column: "BookId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ReturnedRecord_UserId",
-                table: "ReturnedRecord",
+                name: "IX_ReturnedRecords_UserId",
+                table: "ReturnedRecords",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -306,7 +306,7 @@ namespace Library.Repository.Migrations
                 name: "BorrowedRecords");
 
             migrationBuilder.DropTable(
-                name: "ReturnedRecord");
+                name: "ReturnedRecords");
 
             migrationBuilder.DropTable(
                 name: "Books");

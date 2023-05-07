@@ -9,5 +9,7 @@ namespace Library.Core.Repositories
 {
     public interface IBorrowedRecordRepository : IGenericRepository<BorrowedRecord>
     {
+        Task<List<BorrowedRecord>> GetBorrowedRecordsWithBookAsync();
+        Task<List<BorrowedRecord>> GetBorrowedRecordsWithUserIdAsync(int userId);
     }
 }
