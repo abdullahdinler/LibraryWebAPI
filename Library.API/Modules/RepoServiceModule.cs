@@ -13,7 +13,7 @@ namespace Library.API.Modules
 {
     public class RepoServiceModule : Module
     {
-        protected virtual void Load(ContainerBuilder builder)
+        protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterGeneric(typeof(GenericRepository<>)).As(typeof(IGenericRepository<>))
                 .InstancePerLifetimeScope();
