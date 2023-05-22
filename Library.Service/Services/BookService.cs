@@ -41,7 +41,7 @@ namespace Library.Service.Services
             return CustomResponseDto<List<BookDto>>.Success(newDto, 201);
         }
 
-        public async Task<CustomResponseDto<NoContentDto>> Update(BookUpdateDto updateDto)
+        public async Task<CustomResponseDto<NoContentDto>> UpdateAsync(BookUpdateDto updateDto)
         {
             var entity = _mapper.Map<Book>(updateDto);
             _bookRepository.Update(entity);

@@ -1,9 +1,10 @@
-﻿using Library.Core.Models;
+﻿using Library.Core.DTOs.BookDTOs;
+using Library.Core.Models;
 
 namespace Library.Core.DTOs.AuthorDTOs
 {
     public class AuthorWithBookDto : AuthorDto
     {
-        public List<Book> Books { get; set; }
+        public List<BookDto> Books { get; set; }
     }
 }

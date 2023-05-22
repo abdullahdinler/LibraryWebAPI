@@ -18,10 +18,8 @@ namespace Library.Service.Mapping
             CreateMap<Address, AddressDto>().ReverseMap();
             CreateMap<AddressCreateDto, Address>().ReverseMap();
             CreateMap<AddressUpdateDto, Address>().ReverseMap();
-            CreateMap<Address, AddressWithUserDto>().ReverseMap();
-            //CreateMap<AddressWithUserDto, Address>();
-           
-
+            CreateMap<Address, AddressWithUserDto>();
+            
 
             // -------------------Author Mapping-------------------------------
             CreateMap<Author, AuthorDto>().ReverseMap();
@@ -33,7 +31,7 @@ namespace Library.Service.Mapping
             CreateMap<Book, BookDto>().ReverseMap();
             CreateMap<BookCreateDto, Book>().ReverseMap();
             CreateMap<BookUpdateDto, Book>().ReverseMap();
-            CreateMap<Book, BookWithAuthorDto>().ReverseMap();
+            CreateMap<Book, BookWithAuthorDto>();
 
             // -------------------Borrowed Record Mapping---------------------------
             CreateMap<BorrowedRecord, BorrowedRecordDto>().ReverseMap();

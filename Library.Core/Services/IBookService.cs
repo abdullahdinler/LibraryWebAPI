@@ -9,6 +9,6 @@ namespace Library.Core.Services
         Task<CustomResponseDto<List<BookWithAuthorDto>>> GetBookWithAuthorAsync();
         Task<CustomResponseDto<BookDto>> AddAsync(BookCreateDto createDto);
         Task<CustomResponseDto<List<BookDto>>> AddRange(List<BookCreateDto> createDtos);
-        Task<CustomResponseDto<NoContentDto>> Update(BookUpdateDto updateDto);
+        Task<CustomResponseDto<NoContentDto>> UpdateAsync(BookUpdateDto updateDto);
     }
 }

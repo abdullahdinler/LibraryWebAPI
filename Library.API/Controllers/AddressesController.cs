@@ -32,7 +32,7 @@ namespace Library.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(AddressDto dto)
+        public async Task<IActionResult> Save(AddressCreateDto dto)
         {
             return CreateActionResult(await _addressService.AddAsync(dto));
         }
@@ -44,12 +44,12 @@ namespace Library.API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(AddressDto dto)
+        public async Task<IActionResult> Update(AddressUpdateDto dto)
         {
             return CreateActionResult(await _addressService.UpdateAsync(dto));
         }
 
-        [HttpGet("AddressWithUsers")]
+        [HttpGet("[action]")]
         public async Task<IActionResult> GetAddressesWithUsers()
         {
             return CreateActionResult(await _addressService.GetAddressWithUser());

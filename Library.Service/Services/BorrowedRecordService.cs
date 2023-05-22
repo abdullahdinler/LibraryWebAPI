@@ -48,7 +48,7 @@ namespace Library.Service.Services
             return CustomResponseDto<List<BorrowedRecordDto>>.Success(newDto, 201);
         }
 
-        public async Task<CustomResponseDto<NoContentDto>> Update(BorrowedRecordUpdateDto updateDto)
+        public async Task<CustomResponseDto<NoContentDto>> UpdateAsync(BorrowedRecordUpdateDto updateDto)
         {
             var entity = _mapper.Map<BorrowedRecord>(updateDto);
             _borrowedRecordRepository.Update(entity);
